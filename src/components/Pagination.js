@@ -55,11 +55,11 @@ const Pagination = ({data, pageLimit, dataLimit, totalPages, currentPage, setCur
                 })}
                 </div>
                 <div className='page-btn-container'>
-                    <button className={`default ${currentPage===1 ? 'disabled' : 'default'}`} onClick={goToPrevPage}>Previous</button>
+                    <button className={`${currentPage===1 ? 'disabled' : 'default'}`} onClick={goToPrevPage}>Previous</button>
                     {getGroupPages().map((page, index) => {
-                        return <button key={index} onClick={changePage} className={` default ${currentPage===page ? 'active': 'default'}`}>{page}</button>
+                        return <button key={index} onClick={changePage} className={`${currentPage===page ? 'active': 'default'}`}>{page}</button>
                     })}
-                    <button className={`default ${currentPage===totalPages ? 'disabled' : 'default'}`} onClick={goToNextPage}>Next</button>
+                    <button className={`${currentPage===totalPages ? 'disabled' : 'default'}`} onClick={goToNextPage}>Next</button>
                 </div>
             </>
         )
